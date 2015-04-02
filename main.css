@@ -1,0 +1,45 @@
+body {
+	background-color: rgba(3, 44, 44, 0.9);	
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+div {
+	width: 150px;
+	height: 150px;
+	top: 100px;
+}
+
+
+.bio {
+	background-color: red;
+	/*visibility: hidden;*/
+	visibility: visible;
+	position: absolute;
+}
+
+.skills {
+	background-color: green;
+	visibility: hidden;
+	/*visibility: visible;*/
+	position: absolute;
+}
+
+.projects {
+	background-color: yellow;
+	visibility: hidden;
+	/*visibility: visible;*/
+	position: absolute;
+}
+
+.contact {
+	background-color: blue;
+	/*visibility: visible;*/
+	visibility: hidden;
+	position: absolute;
+}
