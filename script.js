@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	$('.bio').click(function(){
 		$(this).animate({
-			"top": "-1000px"
+			"top": "-=1000px"
 		},function(){
 			$(this).css("visibility", "hidden")
 				   .css("top", locationTop)
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 		$('.skills').css("top", "1000px")
 					.css("visibility", "visible")
-					.animate({ "top": "100px" });
+					.animate({ "top": locationTop });
 	});
 
 
@@ -31,12 +31,7 @@ $(document).ready(function(){
 				   .css("top", locationTop);
 		});
 
-		$rr = $('.projects').css("right");
-		$ll = $('.projects').css("left");
-		console.log($rr);
-		console.log($ll);
-
-		$('.projects').css("right", "100px")
+		$('.projects').css("left", "1000px")
 					  .css("visibility", "visible")
 					  .animate({ "left": locationLeft });
 	});
@@ -52,11 +47,9 @@ $(document).ready(function(){
 				   	   .css("top", locationTop);
 		});
 
-		console.log($rr);
-		console.log($ll);
-		$('.contact').css("top", "-1000px")
+		$('.contact').css("top", "-=1000px")
 	   	   	   	   	 .css("visibility", "visible")
-	   	   	   	   	 .animate({	"top": "100px" });
+	   	   	   	   	 .animate({	"top": locationTop });
 	});
 
 
