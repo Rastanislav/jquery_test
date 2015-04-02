@@ -1,39 +1,44 @@
 $(document).ready(function(){
 
-	var locationLeft = "723px";	
-	var locationTop = "100px";	
+	var defaultLeftLocation = "723px";	
+	var defaultTopLocation = "100px";	
 
+	var shiftLeftLocationPos = "1023px";
+	var shiftTopLocationPos = "400px";
+
+	var shiftLeftLocationNeg = "400px";
+	var shiftTopLocationNeg = "-100px";
 
 	$('.bio').click(function(){
 		$(this).animate({
-			"top": "-=1000px"
+			"top": "-100px"
 		},function(){
 			$(this).css("visibility", "hidden")
-				   .css("top", locationTop)
-				   .css("right", locationLeft)
-				   .css("left", locationLeft);
+				   .css("top", defaultTopLocation)
+				   .css("right", defaultLeftLocation)
+				   .css("left", defaultLeftLocation);
 		});
 
-		$('.skills').css("top", "1000px")
+		$('.skills').css("top", shiftTopLocationPos)
 					.css("visibility", "visible")
-					.animate({ "top": locationTop });
+					.animate({ "top": defaultTopLocation });
 	});
 
 
 
 	$('.skills').click(function(){
 		$(this).animate({
-			"left": "-100px"
+			"left": shiftLeftLocationNeg
 		},function(){
 			$(this).css("visibility", "hidden")
-				   .css("left", locationLeft)
-				   .css("right", locationLeft)
-				   .css("top", locationTop);
+				   .css("left", defaultLeftLocation)
+				   .css("right", defaultLeftLocation)
+				   .css("top", defaultTopLocation);
 		});
 
-		$('.projects').css("left", "1000px")
+		$('.projects').css("left", shiftLeftLocationPos)
 					  .css("visibility", "visible")
-					  .animate({ "left": locationLeft });
+					  .animate({ "left": defaultLeftLocation });
 	});
 
 
@@ -42,30 +47,30 @@ $(document).ready(function(){
 			"top": "1000px"
 		}, function(){
 				$(this).css("visibility", "hidden")
-				   	   .css("left", locationLeft)
-				   	   .css("right", locationLeft)
-				   	   .css("top", locationTop);
+					   .css("left", defaultLeftLocation)
+						  .css("right", defaultLeftLocation)
+						  .css("top", defaultTopLocation);
 		});
 
-		$('.contact').css("top", "-=1000px")
+		$('.contact').css("top", shiftTopLocationNeg)
 	   	   	   	   	 .css("visibility", "visible")
-	   	   	   	   	 .animate({	"top": locationTop });
+	   	   	   	   	 .animate({	"top": defaultTopLocation });
 	});
 
 
 	$('.contact').click(function(){
 		$(this).animate({
-			"left": "1000px"
+			"left": shiftLeftLocationPos
 		},function(){
 			$(this).css("visibility", "hidden")
-				   .css("left", locationLeft)
-				   .css("right", locationLeft)
-				   .css("top", locationTop);
+				   .css("left", defaultLeftLocation)
+				   .css("right", defaultLeftLocation)
+				   .css("top", defaultTopLocation);
 		});
 
-		$('.bio').css("left", "0px")
+		$('.bio').css("left", shiftLeftLocationNeg)
 				 .css("visibility", "visible")
-				 .animate({ "left": locationLeft });
+				 .animate({ "left": defaultLeftLocation });
 
 	});
 });
