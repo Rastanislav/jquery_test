@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 	$('.bio').click(function(){
 		$(this).animate({
-			"top": "-100px"
+			"top": shiftTopLocationNeg
 		},function(){
 			$(this).css("visibility", "hidden")
 				   .css("top", defaultTopLocation)
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 	$('.projects').click(function(){
 		$(this).animate({ 
-			"top": "1000px"
+			"top": shiftTopLocationPos
 		}, function(){
 				$(this).css("visibility", "hidden")
 					   .css("left", defaultLeftLocation)
