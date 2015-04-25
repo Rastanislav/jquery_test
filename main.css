@@ -1,45 +1,47 @@
 body {
-	background-color: rgba(3, 44, 44, 0.9);	
+	background-color: rgba(3, 44, 44, 44);	
 }
 
-.container {
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-}
+/*div {*/
+	/*width: 200px;*/
+	/*height: 200px;*/
+	/*[>left: 50%;<]*/
+	/*[>right: 50%;<]*/
+	/*[>margin-left: -100px;<]*/
+	/*[>margin-top: 0;<]*/
+	/*[>margin-right: 0;<]*/
+	/*[>margin-bottom: -100px;<]*/
+	/*[>margin: -100px;<]*/
+	/*position: absolute;*/
+/*}*/
 
-div {
-	width: 150px;
-	height: 150px;
-	top: 100px;
-}
-
-
-.bio {
-	background-color: red;
-	/*visibility: hidden;*/
+#container {
+	width: 400px;
+	height: 400px;
+	background-color: black;
+	margin-top: -200px;
+	margin-right: 0;
+	margin-left: -200px;
+	margin-bottom: 0;
+	left: 50%;
+	top: 50%;
+	position: absolute;
 	visibility: visible;
-	position: absolute;
 }
 
-.skills {
-	background-color: green;
-	visibility: hidden;
-	/*visibility: visible;*/
-	position: absolute;
-}
 
-.projects {
-	background-color: yellow;
-	visibility: hidden;
-	/*visibility: visible;*/
-	position: absolute;
-}
+/*#bio {*/
+	/*background-color: red;*/
+/*}*/
 
-.contact {
-	background-color: blue;
-	/*visibility: visible;*/
-	visibility: hidden;
-	position: absolute;
-}
+/*#skills {*/
+	/*background-color: green;*/
+/*}*/
+
+/*#projects {*/
+	/*background-color: yellow;*/
+/*}*/
+
+/*#contact {*/
+	/*background-color: blue;*/
+/*}*/

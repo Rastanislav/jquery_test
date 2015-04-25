@@ -9,25 +9,25 @@ $(document).ready(function(){
 	var shiftLeftLocationNeg = "400px";
 	var shiftTopLocationNeg = "-100px";
 
-	$('.bio').click(function(){
-		$(this).animate({
+	$('#bio').click(function(){
+		$(this).stop().animate({
 			"top": shiftTopLocationNeg
 		},function(){
 			$(this).css("visibility", "hidden")
-				   .css("top", defaultTopLocation)
+				   .css("left", defaultLeftLocation)
 				   .css("right", defaultLeftLocation)
-				   .css("left", defaultLeftLocation);
+				   .css("top", defaultTopLocation);
 		});
 
-		$('.skills').css("top", shiftTopLocationPos)
+		$('#skills').css("top", shiftTopLocationPos)
 					.css("visibility", "visible")
-					.animate({ "top": defaultTopLocation });
+					.stop().animate({ "top": defaultTopLocation });
 	});
 
 
 
-	$('.skills').click(function(){
-		$(this).animate({
+	$('#skills').click(function(){
+		$(this).stop().animate({
 			"left": shiftLeftLocationNeg
 		},function(){
 			$(this).css("visibility", "hidden")
@@ -36,30 +36,30 @@ $(document).ready(function(){
 				   .css("top", defaultTopLocation);
 		});
 
-		$('.projects').css("left", shiftLeftLocationPos)
+		$('#projects').css("left", shiftLeftLocationPos)
 					  .css("visibility", "visible")
-					  .animate({ "left": defaultLeftLocation });
+					  .stop().animate({ "left": defaultLeftLocation });
 	});
 
 
-	$('.projects').click(function(){
-		$(this).animate({ 
+	$('#projects').click(function(){
+		$(this).stop().animate({ 
 			"top": shiftTopLocationPos
 		}, function(){
 				$(this).css("visibility", "hidden")
 					   .css("left", defaultLeftLocation)
-						  .css("right", defaultLeftLocation)
-						  .css("top", defaultTopLocation);
+					   .css("right", defaultLeftLocation)
+					   .css("top", defaultTopLocation);
 		});
 
-		$('.contact').css("top", shiftTopLocationNeg)
+		$('#contact').css("top", shiftTopLocationNeg)
 	   	   	   	   	 .css("visibility", "visible")
-	   	   	   	   	 .animate({	"top": defaultTopLocation });
+	   	   	   	   	 .stop().animate({	"top": defaultTopLocation });
 	});
 
 
-	$('.contact').click(function(){
-		$(this).animate({
+	$('#contact').click(function(){
+		$(this).stop().animate({
 			"left": shiftLeftLocationPos
 		},function(){
 			$(this).css("visibility", "hidden")
@@ -68,9 +68,9 @@ $(document).ready(function(){
 				   .css("top", defaultTopLocation);
 		});
 
-		$('.bio').css("left", shiftLeftLocationNeg)
+		$('#bio').css("left", shiftLeftLocationNeg)
 				 .css("visibility", "visible")
-				 .animate({ "left": defaultLeftLocation });
+				 .stop().animate({ "left": defaultLeftLocation });
 
 	});
 });
