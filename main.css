@@ -5,10 +5,6 @@ body {
 div {
 	width: 200px;
 	height: 200px;
-	/*margin-top: -100px;*/
-	/*margin-right: 0;*/
-	/*margin-bottom: 0;*/
-	/*margin-left: -100px;*/
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
          -o-transform: translate(-50%,-50%); /** Opera **/
@@ -23,10 +19,6 @@ div {
 	width: 400px;
 	height: 400px;
 	background-color: black;
-	/*margin-top: -200px;*/
-	/*margin-right: 0;*/
-	/*margin-bottom: 0;*/
-	/*margin-left: -200px;*/
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
          -o-transform: translate(-50%,-50%); /** Opera **/
@@ -44,6 +36,7 @@ div {
 }
 
 #skills {
+	/*top: -25%;*/
 	background-color: green;
 }
 
@@ -56,10 +49,10 @@ div {
 }
 
 .move-out-right{
-    -webkit-transform: translate(150%,0); /** Chrome & Safari **/
-       -moz-transform: translate(150%,0); /** Firefox **/
-         -o-transform: translate(150%,0); /** Opera **/
-    		transform: translate(150%,0);
+    -webkit-transform: translate(100%,-50%); /** Chrome & Safari **/
+       -moz-transform: translate(100%,-50%); /** Firefox **/
+         -o-transform: translate(100%,-50%); /** Opera **/
+    		transform: translate(100%,-50%);
          	transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
        -moz-transition: all 1s ease-in-out; /** Firefox **/
@@ -67,20 +60,20 @@ div {
 }
 
 .move-out-left{
-    -webkit-transform: translate(-150%,0); /** Chrome & Safari **/
-       -moz-transform: translate(-150%,0); /** Firefox **/
-         -o-transform: translate(-150%,0); /** Opera **/
-    		transform: translate(-150%,0);
+    -webkit-transform: translate(-200%,-50%); /** Chrome & Safari **/
+       -moz-transform: translate(-200%,-50%); /** Firefox **/
+         -o-transform: translate(-200%,-50%); /** Opera **/
+    		transform: translate(-200%,-50%);
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
        -moz-transition: all 1s ease-in-out; /** Firefox **/
          -o-transition: all 1s ease-in-out; /** Opera **/
 }
 
 .move-out-down{
-    -webkit-transform: translate(0,150%); /** Chrome & Safari **/
-       -moz-transform: translate(0,150%); /** Firefox **/
-         -o-transform: translate(0,150%); /** Opera **/
-    		transform: translate(0,150%);
+    -webkit-transform: translate(-50%,100%); /** Chrome & Safari **/
+       -moz-transform: translate(-50%,100%); /** Firefox **/
+         -o-transform: translate(-50%,100%); /** Opera **/
+    		transform: translate(-50%,100%);
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
        -moz-transition: all 1s ease-in-out; /** Firefox **/
          -o-transition: all 1s ease-in-out; /** Opera **/
@@ -88,31 +81,12 @@ div {
 }
 
 .move-out-up{
-    -webkit-transform: translate(0,-150%); /** Chrome & Safari **/
-       -moz-transform: translate(0,-150%); /** Firefox **/
-         -o-transform: translate(0,-150%); /** Opera **/
-    		transform: translate(0,-150%);
+    -webkit-transform: translate(-50%,-200%); /** Chrome & Safari **/
+       -moz-transform: translate(-50%,-200%); /** Firefox **/
+         -o-transform: translate(-50%,-200%); /** Opera **/
+    		transform: translate(-50%,-200%);
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
        -moz-transition: all 1s ease-in-out; /** Firefox **/
          -o-transition: all 1s ease-in-out; /** Opera **/
          	transition: all 1s ease-in-out;
 }
-
-.move-in-down{
-			top: -25%;
-    -webkit-transform: translate(0,150%); /** Chrome & Safari **/
-       -moz-transform: translate(0,150%); /** Firefox **/
-         -o-transform: translate(0,150%); /** Opera **/
-    		transform: translate(0,150%);
-
-            /*transform: translate(0,600px);*/
-    /*-webkit-transform: translate(0,600px); [>* Chrome & Safari *<]*/
-       /*-moz-transform: translate(0,600px); [>* Firefox *<]*/
-         /*-o-transform: translate(0,600px); [>* Opera *<]*/
-    -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
-       -moz-transition: all 1s ease-in-out; /** Firefox **/
-         -o-transition: all 1s ease-in-out; /** Opera **/
-         	transition: all 1s ease-in-out;
-
-}
-

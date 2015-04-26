@@ -1,78 +1,61 @@
 $(document).ready(function(){
 
-	var defaultLeftLocation = "723px";	
-	var defaultTopLocation = "100px";	
-
-	var shiftLeftLocationPos = "1023px";
-	var shiftTopLocationPos = "400px";
-
-	var shiftLeftLocationNeg = "400px";
-	var shiftTopLocationNeg = "-100px";
-
-
 
 	$('#bio').click(function(){
 		$(this).addClass('move-out-up');
-		//$('#skills').css("top", "-25%");
+		$('#skills').removeClass('move-out-left');
+		$('#skills').css("top", "125%");
 		$('#skills').css("visibility", "visible");
-		$('#skills').addClass('move-in-down');
+		$(this).css("visibility", "hidden");
+		
+		$('#skills').stop().animate({
+			"top": "50%"
+		}, 1000, function(){
+		});
 	});
 
-	//$('#skills').click(function(){
-		//$(this).css("visibility", "visible");
-		//$(this).addClass('move-in-up');
-	//});
+
+	$('#skills').click(function(){
+		$(this).addClass('move-out-left');
+		$('#projects').removeClass('move-out-down');
+		$('#projects').css("left", "125%");
+		$('#projects').css("visibility", "visible");
+		$(this).css("visibility", "hidden");
+
+		$('#projects').stop().animate({
+			"left": "50%"
+		}, 1000, function(){
+		});
+	});
 
 
+	$('#projects').click(function(){
+		$(this).addClass('move-out-down');
+		$('#contact').removeClass('move-out-right');
+		$('#contact').css("top", "-25%");
+		$('#contact').css("visibility", "visible");
+		$(this).css("visibility", "hidden");
+
+		$('#contact').stop().animate({
+			"top": "50%"
+		}, 1000, function(){
+		});
+	});
 
 
+	$('#contact').click(function(){
+		$('#bio').removeClass('move-out-up');
+		$(this).addClass('move-out-right');
+		$('#bio').css("left", "-25%");
+		$('#bio').css("visibility", "visible");
+		$(this).css("visibility", "hidden");
 
-	//$('#skills').click(function(){
-		//$(this).stop().animate({
-			//"left": shiftLeftLocationNeg
-		//},function(){
-			//$(this).css("visibility", "hidden")
-				   //.css("left", defaultLeftLocation)
-				   //.css("right", defaultLeftLocation)
-				   //.css("top", defaultTopLocation);
-		//});
+		$('#bio').stop().animate({
+			"left": "50%"
+		}, 1000, function(){
+		});
+	});
 
-		//$('#projects').css("left", shiftLeftLocationPos)
-					  //.css("visibility", "visible")
-					  //.stop().animate({ "left": defaultLeftLocation });
-	//});
-
-
-	//$('#projects').click(function(){
-		//$(this).stop().animate({ 
-			//"top": shiftTopLocationPos
-		//}, function(){
-				//$(this).css("visibility", "hidden")
-					   //.css("left", defaultLeftLocation)
-					   //.css("right", defaultLeftLocation)
-					   //.css("top", defaultTopLocation);
-		//});
-
-		//$('#contact').css("top", shiftTopLocationNeg)
-								 //.css("visibility", "visible")
-								 //.stop().animate({	"top": defaultTopLocation });
-	//});
-
-
-	//$('#contact').click(function(){
-		//$(this).stop().animate({
-			//"left": shiftLeftLocationPos
-		//},function(){
-			//$(this).css("visibility", "hidden")
-				   //.css("left", defaultLeftLocation)
-				   //.css("right", defaultLeftLocation)
-				   //.css("top", defaultTopLocation);
-		//});
-
-		//$('#bio').css("left", shiftLeftLocationNeg)
-				 //.css("visibility", "visible")
-				 //.stop().animate({ "left": defaultLeftLocation });
-	//});
 });
 
 
