@@ -3,8 +3,8 @@ body {
 }
 
 div {
-	width: 200px;
-	height: 200px;
+	width: 800px;
+	height: 800px;
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
          -o-transform: translate(-50%,-50%); /** Opera **/
@@ -16,9 +16,9 @@ div {
 }
 
 #container {
-	width: 400px;
-	height: 400px;
-	background-color: black;
+	width: 1600px;
+	height: 1600px;
+	/*background-color: black;*/
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
          -o-transform: translate(-50%,-50%); /** Opera **/
@@ -31,21 +31,25 @@ div {
 
 
 #bio {
-	background-color: red;
+	/*background-color: red;*/
+	background-color: green;
 	visibility: visible;
 }
 
 #skills {
 	/*top: -25%;*/
 	background-color: green;
+	/*background-color: white;*/
 }
 
 #projects {
-	background-color: yellow;
+	/*background-color: yellow;*/
+	background-color: green;
 }
 
 #contact {
-	background-color: blue;
+	/*background-color: blue;*/
+	background-color: green;
 }
 
 .move-out-right{
@@ -90,3 +94,20 @@ div {
          -o-transition: all 1s ease-in-out; /** Opera **/
          	transition: all 1s ease-in-out;
 }
+
+li{
+	list-style-type: none;
+	display: inline;	
+}
+
+.skills-main-list{
+	display: inline;	
+}
+
+img{
+	height: 80px;	
+	width: 80px;	
+	padding-left: 10px;
+	/*background: yellow;*/
+}
+

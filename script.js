@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-	$('#bio').click(function(){
+	$('#bio').one('click', function(){
 		$(this).addClass('move-out-up');
 		$('#skills').removeClass('move-out-left');
 		$('#skills').css("top", "125%");
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#skills').click(function(){
+	$('#skills').one('click', function(){
 		$(this).addClass('move-out-left');
 		$('#projects').removeClass('move-out-down');
 		$('#projects').css("left", "125%");
@@ -29,7 +29,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#projects').click(function(){
+	$('#projects').one('click', function(){
 		$(this).addClass('move-out-down');
 		$('#contact').removeClass('move-out-right');
 		$('#contact').css("top", "-25%");
@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#contact').click(function(){
+	$('#contact').one('click', function(){
 		$('#bio').removeClass('move-out-up');
 		$(this).addClass('move-out-right');
 		$('#bio').css("left", "-25%");
