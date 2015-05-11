@@ -1,59 +1,74 @@
 $(document).ready(function(){
 
+var moveUp = function(id1, id2) {
+	$('#' + id1).addClass('move-out-up');
+	$('#' + id2).removeClass('move-out-left');
+	$('#' + id2).css("top", "125%");
+	$('#' + id2).css("visibility", "visible");
+	$('#' + id1).css("visibility", "hidden");
+	$('#' + id2).stop().animate({
+		"top": "50%"
+	}, 1000, function(){
+	});
+};
 
-	$('#bio').one('click', function(){
-		$(this).addClass('move-out-up');
-		$('#skills').removeClass('move-out-left');
-		$('#skills').css("top", "125%");
-		$('#skills').css("visibility", "visible");
-		$(this).css("visibility", "hidden");
-		
-		$('#skills').stop().animate({
-			"top": "50%"
-		}, 1000, function(){
-		});
+
+var moveLeft = function(id1, id2) {
+	$('#' + id1).addClass('move-out-left');
+	$('#' + id2).removeClass('move-out-down');
+	$('#' + id2).css("left", "125%");
+	$('#' + id2).css("visibility", "visible");
+	$('#' + id1).css("visibility", "hidden");
+	$('#' + id2).stop().animate({
+		"left": "50%"
+	}, 1000, function(){
+	});
+};
+
+
+var moveDown = function(id1, id2) {
+	$('#' + id1).addClass('move-out-down');
+	$('#' + id2).removeClass('move-out-right');
+	$('#' + id2).css("top", "-25%");
+	$('#' + id2).css("visibility", "visible");
+	$('#' + id1).css("visibility", "hidden");
+	$('#' + id2).stop().animate({
+		"top": "50%"
+	}, 1000, function(){
+	});
+};
+
+
+var moveRight = function(id1, id2) {
+	$('#' + id1).addClass('move-out-right');
+	$('#' + id2).removeClass('move-out-up');
+	$('#' + id2).css("left", "-25%");
+	$('#' + id2).css("visibility", "visible");
+	$('#' + id1).css("visibility", "hidden");
+	$('#' + id2).stop().animate({
+		"left": "50%"
+	}, 1000, function(){
+	});
+};
+
+
+	$('#bio').click(function(){
+		moveUp('bio', 'skills');	
+	});
+	
+
+	$('#skills').click(function(){
+		moveLeft('skills', 'projects');	
 	});
 
 
-	$('#skills').one('click', function(){
-		$(this).addClass('move-out-left');
-		$('#projects').removeClass('move-out-down');
-		$('#projects').css("left", "125%");
-		$('#projects').css("visibility", "visible");
-		$(this).css("visibility", "hidden");
-
-		$('#projects').stop().animate({
-			"left": "50%"
-		}, 1000, function(){
-		});
+	$('#projects').click(function(){
+		moveDown('projects', 'contact');	
 	});
 
 
-	$('#projects').one('click', function(){
-		$(this).addClass('move-out-down');
-		$('#contact').removeClass('move-out-right');
-		$('#contact').css("top", "-25%");
-		$('#contact').css("visibility", "visible");
-		$(this).css("visibility", "hidden");
-
-		$('#contact').stop().animate({
-			"top": "50%"
-		}, 1000, function(){
-		});
-	});
-
-
-	$('#contact').one('click', function(){
-		$('#bio').removeClass('move-out-up');
-		$(this).addClass('move-out-right');
-		$('#bio').css("left", "-25%");
-		$('#bio').css("visibility", "visible");
-		$(this).css("visibility", "hidden");
-
-		$('#bio').stop().animate({
-			"left": "50%"
-		}, 1000, function(){
-		});
+	$('#contact').click(function(){
+		moveRight('contact', 'bio');
 	});
 
 });
