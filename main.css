@@ -1,7 +1,24 @@
 body {
-	background-color: rgba(3, 44, 44, 44);	
+	/*background-color: rgba(3, 44, 44, 44);	*/
+	background-color: black;	
 	overflow: hidden;
 	/*height: 100%;*/
+}
+
+#container {
+	width: 1600px;
+	height: 1600px;
+	overflow: hidden;
+	/*background-color: white;*/
+	
+    -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
+       -moz-transform: translate(-50%,-50%); /** Firefox **/
+         -o-transform: translate(-50%,-50%); /** Opera **/
+    		transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	visibility: visible;
 }
 
 div {
@@ -15,22 +32,9 @@ div {
 	top: 50%;
 	position: absolute;
 	visibility: hidden;
+	border-radius: 2em;
 }
 
-#container {
-	width: 1600px;
-	height: 1600px;
-	overflow: hidden;
-	/*background-color: black;*/
-    -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
-       -moz-transform: translate(-50%,-50%); /** Firefox **/
-         -o-transform: translate(-50%,-50%); /** Opera **/
-    		transform: translate(-50%,-50%);
-	left: 50%;
-	top: 50%;
-	position: absolute;
-	visibility: visible;
-}
 
 
 #bio {
