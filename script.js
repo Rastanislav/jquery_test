@@ -59,39 +59,61 @@ var moveRight = function(){
 
 
 
-//$('.active-div').on('DOMMouseScroll mousewheel', function (e) {
-  //if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
-	  ////scroll down
-		  //console.log('Down');
+$('body').on('DOMMouseScroll mousewheel', function (e) {
 
-		  //// get div from active-div class
-		  //// then using switch add necessary movements for divs
-		  //// in movement functions correct adding/removing active-div class. + use .next()
-		  ////var currentDiv = $('.active-div');
-		  ////var nextDiv = currentDiv.next();
+var currentDiv = $('.active-div');
+var nextDiv = currentDiv.next();
+var prevDiv = currentDiv.prev();
 
-			////if(nextDiv.length == 0) {
-				////nextDiv = $('.slide').first();
-			  ////}
+if(nextDiv.length == 0) {
+	nextDiv = $('#bio');
+}
 
-		  ////switch($('.active-div').attr('id')){
-			  ////case 'bio':
-				  ////break;
-			  ////case 'skills':
-				  ////break;
-			  ////case 'projects':
-				  ////break;
-			  ////case 'contact':
-				  ////break;
+if(prevDiv.length == 0) {
+	prevDiv = $('#contact');
+}
 
-		  //}
-  //} else {
-	  ////scroll up
-	  //console.log('Up');
-  //}
-  ////prevent page fom scrolling
-  //return false;
-//});
+  if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+	  //scroll down
+
+
+	  switch($('.active-div').attr('id')){
+		  case 'bio':
+			  moveDiv('bio', 'skills', 'up');	
+			  break;
+		  case 'skills':
+			  moveDiv('skills', 'projects', "left");
+			  break;
+		  case 'projects':
+			  moveDiv('projects', 'contact', 'down');	
+			  break;
+		  case 'contact':
+			  moveDiv('contact', 'bio', 'right');
+			  break;
+	  }
+  	  nextDiv.addClass('active-div');
+  } else {
+	  //scroll up
+	  switch($('.active-div').attr('id')){
+		  case 'bio':
+			  moveDiv('bio', 'contact', 'left');	
+			  break;
+		  case 'skills':
+			  moveDiv('skills', 'bio', "down");
+			  break;
+		  case 'projects':
+			  moveDiv('projects', 'skills', 'right');	
+			  break;
+		  case 'contact':
+			  moveDiv('contact', 'projects', 'up');
+			  break;
+  	  }
+  	  		  prevDiv.addClass('active-div');
+  }
+  	  //prevent page fom scrolling
+  	  currentDiv.removeClass('active-div');
+  	  return false;
+  });
 
 
 
@@ -100,6 +122,7 @@ var moveRight = function(){
 	$('#bio').click(function(){
 		//moveUp();	
 		moveDiv('bio', 'skills', 'up');	
+		//$(this).removeClass('active-div');
 		//$(this).off().removeClass();
 		//setTimeout(function(){ 
 		//$('#bio').click(moveUp) }, 3000); 
