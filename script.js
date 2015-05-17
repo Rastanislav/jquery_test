@@ -2,28 +2,23 @@ $(document).ready(function(){
 
 
 var moveDiv = function(id1, id2, direction) {
-	var options = {};
 	var edge;
 	var percent;
 
 	switch(direction){
 		case "up":
-			options = JSON.parse('{"top": "50%"}');
 			edge = "top";
-			percent = "150%";
+			percent = "125%";
 			break;
 		case "left":
-			options = JSON.parse('{"left": "50%"}');
 			edge = "left";
 			percent = "125%";
 			break;
 		case "down":
-			options = JSON.parse('{"top": "50%"}');
 			edge = "top";
 			percent = "-25%";
 			break;
 		case "right":
-			options = JSON.parse('{"left": "50%"}');
 			edge = "left";
 			percent = "-25%";
 			break;
@@ -31,14 +26,17 @@ var moveDiv = function(id1, id2, direction) {
 			console.log("Wrong direction, dumbass...");
 	}
 
+	$('#' + id1).removeClass();
+	$('#' + id1).css('top', '50%');
+	$('#' + id1).css('left', '50%');
+	$('#' + id1).addClass('init-position');
 	$('#' + id1).addClass('move-out-' + direction);
-	$('#' + id2).removeClass();
-	$('#' + id2).css(edge, percent);
-	$('#' + id2).css("visibility", "visible");
-	$('#' + id1).css("visibility", "hidden");
-	$('#' + id2).stop().animate(
-		options, 1000, function(){
-	});
+	$('#' + id2).removeClass()
+				.css(edge, percent)
+				.css("visibility", "visible");
+	setTimeout(function(){
+		$('#' + id2).addClass('move-out-' + direction);
+	}, 100);
 };
 
 var moveUp =function(){
@@ -57,17 +55,16 @@ var moveRight = function(){
 	moveDiv('contact', 'bio', 'right');
 }	
 
-
 var processing = false;
 $('body').on('DOMMouseScroll mousewheel', function (e) {
+	if(processing == true){
+		console.log("nope");
+		return false;
+	}
 
-if (processing === true){
-	return false;
-}
 var currentDiv = $('.active-div');
 var nextDiv = currentDiv.next();
 var prevDiv = currentDiv.prev();
- 
 
 if(nextDiv.length == 0) {
 	nextDiv = $('#bio');
@@ -77,7 +74,7 @@ if(prevDiv.length == 0) {
 	prevDiv = $('#contact');
 }
 
-processing = true;
+
   if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
 	  //scroll down
 
@@ -115,9 +112,11 @@ processing = true;
   	  }
   	  		  prevDiv.addClass('active-div');
   }
-  	  //prevent page fom scrolling
   	  currentDiv.removeClass('active-div');
-  	  processing = false;
+	processing = true;
+	setTimeout(function(){
+		processing = false;
+	}, 1050);
   	  return false;
   });
 
@@ -128,34 +127,28 @@ processing = true;
 	$('#bio').click(function(){
 		//moveUp();	
 		moveDiv('bio', 'skills', 'up');	
-		//$(this).removeClass('active-div');
-		//$(this).off().removeClass();
-		//setTimeout(function(){ 
-		//$('#bio').click(moveUp) }, 3000); 
+	//$(this).addClass('move-out-up');
+	//$('#skills').removeClass();
+	//$('#skills').css('top', '125%');
+	//$('#skills').css("visibility", "visible");
+	//setTimeout(function(){
+		//$('#skills').addClass('move-out-up');
+	//});
 	});
 				
 
 	$('#skills').click(function(){
-		moveLeft();	
-		//$(this).off();
-		//setTimeout(function(){ 
-		//$('#skills').click(moveLeft) }, 3000); 
+		moveDiv('skills', 'projects', 'left');	
 	});
 
 
 	$('#projects').click(function(){
 		moveDown();	
-		//$(this).off();
-		//setTimeout(function(){ 
-		//$('#projects').click(moveDown) }, 3000); 
 	});
 
 
 	$('#contact').click(function(){
 		moveRight();	
-		//$(this).off();
-		//setTimeout(function(){ 
-		//$('#contact').click(moveRight) }, 3000); 
 	});
 
 });
