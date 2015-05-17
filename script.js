@@ -58,12 +58,16 @@ var moveRight = function(){
 }	
 
 
-
+var processing = false;
 $('body').on('DOMMouseScroll mousewheel', function (e) {
 
+if (processing === true){
+	return false;
+}
 var currentDiv = $('.active-div');
 var nextDiv = currentDiv.next();
 var prevDiv = currentDiv.prev();
+ 
 
 if(nextDiv.length == 0) {
 	nextDiv = $('#bio');
@@ -73,6 +77,7 @@ if(prevDiv.length == 0) {
 	prevDiv = $('#contact');
 }
 
+processing = true;
   if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
 	  //scroll down
 
@@ -112,6 +117,7 @@ if(prevDiv.length == 0) {
   }
   	  //prevent page fom scrolling
   	  currentDiv.removeClass('active-div');
+  	  processing = false;
   	  return false;
   });
 

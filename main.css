@@ -32,7 +32,8 @@ div {
 	top: 50%;
 	position: absolute;
 	visibility: hidden;
-	border-radius: 2em;
+	border-radius: 2em;	
+	
 }
 
 
@@ -92,10 +93,21 @@ div {
 }
 
 .move-out-up{
-    -webkit-transform: translate(-50%,-200%); /** Chrome & Safari **/
-       -moz-transform: translate(-50%,-200%); /** Firefox **/
-         -o-transform: translate(-50%,-200%); /** Opera **/
-    		transform: translate(-50%,-200%);
+    -webkit-transform: translate(-50%, -200%); /** Chrome & Safari **/
+       -moz-transform: translate(-50%, -200%); /** Firefox **/
+         -o-transform: translate(-50%, -200%); /** Opera **/
+    		transform: translate(-50%, -200%);
+    -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
+       -moz-transition: all 1s ease-in-out; /** Firefox **/
+         -o-transition: all 1s ease-in-out; /** Opera **/
+         	transition: all 1s ease-in-out;
+}
+
+.move-in-up{
+    -webkit-transform: translate(-50%, -150%); /** Chrome & Safari **/
+       -moz-transform: translate(-50%, -150%); /** Firefox **/
+         -o-transform: translate(-50%, -150%); /** Opera **/
+    		transform: translate(-50%, -150%);
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
        -moz-transition: all 1s ease-in-out; /** Firefox **/
          -o-transition: all 1s ease-in-out; /** Opera **/
