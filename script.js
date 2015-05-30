@@ -1,10 +1,12 @@
 $(document).ready(function(){
-	$('body').scrollTop(0);
+
 	var moveDiv = function(selector1, selector2, direction) {
 		var edge;
 		var percent;
-		var $id1 = $('#' + selector1);
-		var $id2 = $('#' + selector2);
+		var $id1 = $('#div-' + selector1);
+		var $id2 = $('#div-' + selector2);
+		var $sideBarLeft = $('.sidebar-left');
+		var $sideBarRight = $('.sidebar-right');
 
 		switch(direction){
 			case "up":
@@ -30,6 +32,10 @@ $(document).ready(function(){
 		$id1.removeClass();
 		$id1.css('top', '50%');
 		$id1.css('left', '50%');
+		$sideBarLeft.fadeOut(100);
+		//$sideBarLeft.load("sidebarRight.html #" + selector2);
+		$sideBarRight.fadeOut(100);
+		$sideBarRight.load("sidebarRight.txt");
 		$id1.addClass('move-out-' + direction);
 		$id2.removeClass()
 			.css(edge, percent)
@@ -38,6 +44,8 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$id2.addClass('move-out-' + direction);
 		}, 100);
+		$sideBarLeft.fadeIn(1200);
+		$sideBarRight.fadeIn(1200);
 	};
 
 
@@ -53,11 +61,11 @@ $(document).ready(function(){
 		var prevDiv = currentDiv.prev();
 
 		if(nextDiv.length == 0) {
-			nextDiv = $('#bio');
+			nextDiv = $('#div-bio');
 		}
 
 		if(prevDiv.length == 0) {
-			prevDiv = $('#contact');
+			prevDiv = $('#div-contact');
 		}
 
 
@@ -65,16 +73,16 @@ $(document).ready(function(){
 	  		//scroll down
 
 	  		switch($('.active-div').attr('id')){
-		  		case 'bio':
+		  		case 'div-bio':
 			  		moveDiv('bio', 'skills', 'up');	
 			  		break;
-		  		case 'skills':
+		  		case 'div-skills':
 			  		moveDiv('skills', 'projects', "left");
 			  		break;
-		  		case 'projects':
+		  		case 'div-projects':
 			  		moveDiv('projects', 'contact', 'down');	
 			  		break;
-		  		case 'contact':
+		  		case 'div-contact':
 			  		moveDiv('contact', 'bio', 'right');
 			  		break;
 	  		}
@@ -82,16 +90,16 @@ $(document).ready(function(){
   		} else {
 	  		//scroll up
 	  		switch($('.active-div').attr('id')){
-		  		case 'bio':
+		  		case 'div-bio':
 			  		moveDiv('bio', 'contact', 'left');	
 			  		break;
-		  		case 'skills':
+		  		case 'div-skills':
 			  		moveDiv('skills', 'bio', "down");
 			  		break;
-		  		case 'projects':
+		  		case 'div-projects':
 			  		moveDiv('projects', 'skills', 'right');	
 			  		break;
-		  		case 'contact':
+		  		case 'div-contact':
 			  		moveDiv('contact', 'projects', 'up');
 			  		break;
   	  		}

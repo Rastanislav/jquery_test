@@ -38,24 +38,24 @@ div {
 
 
 
-#bio {
+#div-bio {
 	/*background-color: red;*/
 	background-color: green;
 	visibility: visible;
 }
 
-#skills {
+#div-skills {
 	/*top: -25%;*/
 	background-color: green;
 	/*background-color: white;*/
 }
 
-#projects {
+#div-projects {
 	/*background-color: yellow;*/
 	background-color: green;
 }
 
-#contact {
+#div-contact {
 	/*background-color: blue;*/
 	background-color: green;
 }
@@ -238,39 +238,28 @@ input:focus, textarea:focus {
   transition:300ms ease-in-out;
 }
 
-.sidebar-left{
+.sidebar-left, .sidebar-right{
 	visibility: visible;
 	background-color: red;
-	width: 200px;
+	width: 240px;
 	height: 600px;
 	left: auto;
 	top: 50%;
 	position: relative;
 	border-radius: 0em;	
-	float: left;
     -webkit-transform: translateY(-50%); /** Chrome & Safari **/
        -moz-transform: translateY(-50%); /** Firefox **/
          -o-transform: translateY(-50%); /** Opera **/
     		transform: translateY(-50%);
+
+}
+.sidebar-left {
+	float: left;
 	
 }
 
-.sidebar-right{
-	visibility: visible;
-	background-color: red;
-	width: 200px;
-	height: 600px;
-	left: auto;
-	top: 50%;
-	position: relative;
-	display: table;
-	border-radius: 0em;	
+.sidebar-right {
 	float: right;
-    -webkit-transform: translateY(-50%); /** Chrome & Safari **/
-       -moz-transform: translateY(-50%); /** Firefox **/
-         -o-transform: translateY(-50%); /** Opera **/
-    		transform: translateY(-50%);
-	
 }
 
 #footer{
@@ -278,8 +267,8 @@ input:focus, textarea:focus {
 	bottom: 0;
 	height: 60px;
 	border-radius: 0em;	
-	left:50%;
-	top:auto;
+	left: 50%;
+	top: auto;
 	visibility: visible;
 	background-color: white;
     -webkit-transform: translateX(-50%); /** Chrome & Safari **/

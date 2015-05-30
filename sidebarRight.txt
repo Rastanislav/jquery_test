@@ -1,0 +1,11 @@
+<div id="bio">
+	<b>Name:</b><br />Stanislavs Jasinskis<br />
+	<br />
+	<b>Age:</b><br />26<br />
+	<br />
+	<b>Education:</b><br /> Electronics Engineering Bsc.<br />
+	<br />
+	<b>Original location:</b><br /> Liepaja, Latvia<br />
+	<br />
+	<b>Current location:</b><br /> Prague, Czech Republic<br />
+</div>
