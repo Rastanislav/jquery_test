@@ -1,6 +1,6 @@
 body {
 	/*background-color: rgba(3, 44, 44, 44);	*/
-	background-color: white;	
+	background-color:#94FF94;	
 	overflow: hidden;
 	/*height: 100%;*/
 }
@@ -9,7 +9,7 @@ body {
 	width: 1200px;
 	height: 820px;
 	overflow: hidden;
-	/*background-color: white;*/
+	/*background-color: #94FF94;*/
 	
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
@@ -43,7 +43,7 @@ div {
 }
 
 #div-bio, #div-skills,  #div-projects, #div-contact {
-	background-color: #ADFFAD;
+	background-color:#E0FFF0;	
     font-family: Helvetica;
 	text-align: center;
 }
@@ -100,24 +100,24 @@ li{
 	display: inline;	
 }
 
-/*img{*/
-	/*height: 80px;	*/
-	/*width: 80px;	*/
-	/*padding-left: 10px;*/
-	/*[>background: yellow;<]*/
+img.info{
+	height: 20px;	
+	width: 20px;	
+}
+
+/*.contact a{*/
+	/*[>top: 50%;<]*/
+	/*position: relative;*/
+	  /*[>-webkit-transform: translateY(-50%);<]*/
+		/*[>-ms-transform: translateY(-50%);<]*/
+		  /*[>transform: translateY(-50%)<]*/
 /*}*/
 
-.contact{
-
-	height: 260px;	
-	width: 414px;	
-	padding-left: 10px;
-}
 
 
 .sidebar-left, .sidebar-right{
 	visibility: visible;
-	background-color: #DDDDDD;
+	background-color:#94FF94;
 	left: auto;
 	top: 50%;
 	position: relative;
@@ -129,13 +129,11 @@ li{
     font-family: Helvetica;
 
 }
-.sidebar-left {
+.sidebar-left  {
 	float: left;
 	width: 240px;
 	height: 600px;
-	text-align: right;
-	vertical-align:top;
-	
+	text-align: center;
 }
 
 .sidebar-right {
@@ -180,4 +178,9 @@ hr{
 	height: 0;
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+svg{
+	width: 30px;
+	height: 30px;
 }
