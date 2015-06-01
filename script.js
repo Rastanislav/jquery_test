@@ -1,12 +1,17 @@
 $(document).ready(function(){
 
 $(document).on("click","#project1",function(){
-	$('.active-div').load("div.html #proj1" );
+	$('.active-div').load("div.html #proj1");
 });
 
 $(document).on("click","#project2",function(){
 	$('.active-div').load("div.html #proj2" );
 });
+
+//$('#div-bio').load('div.html #bio');
+//$('#div-skills').load('div.html #skills');
+//$('#div-projects').load('div.html #proj1');
+//$('#div-contact').load('div.html #contact');
 
 	var moveDiv = function(selector1, selector2, direction) {
 		var edge;
@@ -40,8 +45,8 @@ $(document).on("click","#project2",function(){
 		$id1.removeClass();
 		$id1.css('top', '50%');
 		$id1.css('left', '50%');
-		$sideBarLeft.fadeOut(100).text("");
-		$sideBarRight.fadeOut(100);
+		$sideBarLeft.css('visibility', 'hidden').text("");
+		$sideBarRight.css('visibility', 'hidden');
 		$id1.addClass('move-out-' + direction);
 		$id2.removeClass()
 			.css(edge, percent)
@@ -50,10 +55,11 @@ $(document).on("click","#project2",function(){
 		setTimeout(function(){
 			$id2.addClass('move-out-' + direction);
 		}, 100);
-		$sideBarLeft.fadeIn(1000,function(){
+
+		setTimeout(function(){
 			$sideBarLeft.load("sidebarLeft.html #" + selector2);
-		});
-		$sideBarRight.fadeIn(1000)
+			//$sideBarLeft.load("sidebarRight.html #" + selector1);
+		}, 1000);
 	};
 
 

@@ -118,8 +118,8 @@ img.info{
 
 .sidebar-left, .sidebar-right{
 	visibility: visible;
-	/*background-color:#191E19 ;	*/
-	background-color:red;	
+	background-color:#191E19 ;	
+	/*background-color:red;	*/
 	color:#E8E8E8;
 	left: auto;
 	top: 50%;
@@ -187,4 +187,10 @@ hr{
 svg{
 	width: 30px;
 	height: 30px;
+}
+
+.icon-skill{
+	width: 80px;
+	height: 80px;
+	padding: 10px 10px 10px 10px;
 }
