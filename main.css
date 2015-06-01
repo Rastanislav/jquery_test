@@ -1,6 +1,6 @@
 body {
 	/*background-color: rgba(3, 44, 44, 44);	*/
-	background-color:#94FF94;	
+	background-color:#191E19 ;	
 	overflow: hidden;
 	/*height: 100%;*/
 }
@@ -9,7 +9,7 @@ body {
 	width: 1200px;
 	height: 820px;
 	overflow: hidden;
-	/*background-color: #94FF94;*/
+	/*background-color: white;*/
 	
     -webkit-transform: translate(-50%,-50%); /** Chrome & Safari **/
        -moz-transform: translate(-50%,-50%); /** Firefox **/
@@ -43,7 +43,8 @@ div {
 }
 
 #div-bio, #div-skills,  #div-projects, #div-contact {
-	background-color:#E0FFF0;	
+	background-color:#ECECEC;	
+	color:#171717;
     font-family: Helvetica;
 	text-align: center;
 }
@@ -117,7 +118,9 @@ img.info{
 
 .sidebar-left, .sidebar-right{
 	visibility: visible;
-	background-color:#94FF94;
+	/*background-color:#191E19 ;	*/
+	background-color:red;	
+	color:#E8E8E8;
 	left: auto;
 	top: 50%;
 	position: relative;
@@ -160,6 +163,7 @@ img.info{
 button{
 	background:none;
 	border:none;
+	color:#ECECEC;	
 }
 
 .div-visible{
