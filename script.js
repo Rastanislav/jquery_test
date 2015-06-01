@@ -8,10 +8,11 @@ $(document).on("click","#project2",function(){
 	$('.active-div').load("div.html #proj2" );
 });
 
-//$('#div-bio').load('div.html #bio');
-//$('#div-skills').load('div.html #skills');
-//$('#div-projects').load('div.html #proj1');
-//$('#div-contact').load('div.html #contact');
+$('#div-bio').load('div-bio.html');
+$('#div-skills').load('div-skills.html');
+$('#div-projects').load('div.html #proj1');
+$('#div-contact').load('div-contact.html');
+$('.sidebar-left').load('sidebarLeft.html #bio');
 
 	var moveDiv = function(selector1, selector2, direction) {
 		var edge;

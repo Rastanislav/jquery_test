@@ -166,15 +166,6 @@ button{
 	color:#ECECEC;	
 }
 
-.div-visible{
-	visibility: visible;
-}
-
-
-h3 {
-	/*text-decoration: overline;*/
-	/*text-decoration: underline;*/
-}
 
 hr{
 	width: 50%;
@@ -184,7 +175,7 @@ hr{
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-svg{
+.icon-project{
 	width: 30px;
 	height: 30px;
 }
@@ -193,4 +184,7 @@ svg{
 	width: 80px;
 	height: 80px;
 	padding: 10px 10px 10px 10px;
+}
+.projects{
+visibility: inherit;
 }
