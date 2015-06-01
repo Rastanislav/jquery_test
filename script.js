@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+$(document).on("click","#project1",function(){
+	$('.active-div').load("div.html #proj1" );
+});
+
+$(document).on("click","#project2",function(){
+	$('.active-div').load("div.html #proj2" );
+});
+
 	var moveDiv = function(selector1, selector2, direction) {
 		var edge;
 		var percent;
@@ -32,10 +40,8 @@ $(document).ready(function(){
 		$id1.removeClass();
 		$id1.css('top', '50%');
 		$id1.css('left', '50%');
-		$sideBarLeft.fadeOut(100);
-		//$sideBarLeft.load("sidebarRight.html #" + selector2);
+		$sideBarLeft.fadeOut(100).text("");
 		$sideBarRight.fadeOut(100);
-		$sideBarRight.load("sidebarRight.txt");
 		$id1.addClass('move-out-' + direction);
 		$id2.removeClass()
 			.css(edge, percent)
@@ -44,8 +50,10 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$id2.addClass('move-out-' + direction);
 		}, 100);
-		$sideBarLeft.fadeIn(1200);
-		$sideBarRight.fadeIn(1200);
+		$sideBarLeft.fadeIn(1000,function(){
+			$sideBarLeft.load("sidebarLeft.html #" + selector2);
+		});
+		$sideBarRight.fadeIn(1000)
 	};
 
 
